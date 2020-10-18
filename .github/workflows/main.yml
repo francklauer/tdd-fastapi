@@ -68,4 +68,4 @@ jobs:
       - name: Black
         run: docker exec fastapi-tdd python -m black . --check
       - name: isort
-        run: docker exec fastapi-tdd python isort ./*/*.py --check-only
+        run: docker exec fastapi-tdd /bin/sh -c "python -m isort ./*/*.py --check-only"
